@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="viewport">
+      <div class="canvas">
+        <!-- STAR BORDER OVERLAY -->
+        <!-- <img src="assets/stars.png" class="star-frame" /> -->
+        <!-- <img src="assets/map-directions.png" class="map-directions" /> -->
+        <!-- BACK BUTTON (ONLY ONE) -->
+        <img src="assets/back-button.png" class="back-btn" onclick="goBack()" />
+
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+          <img src="assets/image-01.png" class="background" />
+          <img
+            src="assets/button-01.png"
+            class="hotspot btn1"
+            onclick="goToSlide(1)"
+          />
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+          <img src="assets/image-02.png" class="background" />
+          <img
+            src="assets/button-02.png"
+            class="hotspot btn2"
+            onclick="goToSlide(2)"
+          />
+          <img
+            src="assets/button-03.png"
+            class="hotspot btn3"
+            onclick="goToSlide(2)"
+          />
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+          <img src="assets/image-03.png" class="background" />
+          <img
+            src="assets/button-04.png"
+            class="hotspot btn4"
+            onclick="goToSlide(3)"
+          />
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide">
+          <img src="assets/image-04.png" class="background" />
+          <img
+            src="assets/button-05.png"
+            class="hotspot btn5"
+            onclick="goToSlide(4)"
+          />
+          <img
+            src="assets/button-06.png"
+            class="hotspot btn6"
+            onclick="goToSlide(4)"
+          />
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide">
+          <img src="assets/image-05.png" class="background" />
+          <img
+            src="assets/button-07.png"
+            class="hotspot btn7"
+            onclick="goToSlide(5)"
+          />
+          <img
+            src="assets/button-08.png"
+            class="hotspot btn8"
+            onclick="goToSlide(5)"
+          />
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide">
+          <img src="assets/image-06.png" class="background" />
+          <img
+            src="assets/button-09.png"
+            class="hotspot btn9"
+            onclick="goToSlide(6)"
+          />
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="slide">
+          <img src="assets/image-07.png" class="background" />
+          <img
+            src="assets/button-10.png"
+            class="hotspot btn10"
+            onclick="goToSlide(7)"
+          />
+          <img
+            src="assets/button-11.png"
+            class="hotspot btn11"
+            onclick="goToSlide(7)"
+          />
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="slide">
+          <img src="assets/image-08.png" class="background" />
+          <img
+            src="assets/button-12.png"
+            class="hotspot btn12"
+            onclick="goToSlide(9)"
+          />
+          <img
+            src="assets/button-13.png"
+            class="hotspot btn13"
+            onclick="goToSlide(8)"
+          />
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="slide">
+          <img src="assets/image-13.png" class="background" />
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="slide">
+          <img src="assets/image-08.png" class="background" />
+          <img
+            src="assets/button-12.png"
+            class="hotspot btn12"
+            onclick="goToSlide(10)"
+          />
+          <img
+            src="assets/button-13.png"
+            class="hotspot btn13"
+            onclick="goToSlide(8)"
+          />
+        </div>
+
+        <!-- SLIDE 11 -->
+        <div class="slide">
+          <img src="assets/image-12.png" class="background" />
+          <img
+            src="assets/button-14.png"
+            class="hotspot btn14"
+            onclick="goToSlide(11)"
+          />
+          <img
+            src="assets/button-15.png"
+            class="hotspot btn15"
+            onclick="goToSlide(11)"
+          />
+        </div>
+
+        <!-- SLIDE 12 -->
+        <div class="slide">
+          <img src="assets/image-11.png" class="background" />
+          <img
+            src="assets/button-16.png"
+            class="hotspot btn16"
+            onclick="goToSlide(12)"
+          />
+        </div>
+
+        <!-- SLIDE 13 -->
+        <div class="slide">
+          <img src="assets/image-14.png" class="background" />
+        </div>
+
+        <!-- MAP BUTTON -->
+        <img src="assets/map-icon.png" class="map-btn" onclick="toggleMap()" />
+
+        <!-- MAP OVERLAY -->
+        <div class="map-overlay" id="mapOverlay">
+          <img src="assets/map.png" class="map-image" />
+          <img src="assets/map-directions.png" class="map-directions" />
+          <img src="assets/map-marker.png" class="map-marker" id="mapMarker" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
