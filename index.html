@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Marina's Interactive Site</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/iyo1xix.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+      }
+
+      /* =========================
+         FIXED BANNER (WORKING)
+      ========================= */
+
+      #banner {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        padding: 12px 40px;
+
+        background: rgb(255, 0, 174);
+        color: black;
+
+        font-family: "cofo-raffine-light", sans-serif;
+        font-weight: 900;
+        letter-spacing: 3px;
+
+        z-index: 9999;
+
+        animation: glow 3s ease-in-out infinite;
+      }
+
+      @keyframes glow {
+        0%, 100% {
+          filter: brightness(1);
+        }
+        50% {
+          filter: brightness(1.15);
+        }
+      }
+
+      /* =========================
+         MAIN LAYOUT
+      ========================= */
+
+      #container {
+        padding: 40px;
+        max-width: 800px;
+      }
+
+      /* =========================
+         ASCII BLINK
+      ========================= */
+
+      #eye-wrapper {
+        position: relative;
+        height: 6em;
+        margin-bottom: 30px;
+      }
+
+      .ascii {
+        position: absolute;
+        font-family: monospace;
+        white-space: pre;
+        line-height: 1.2;
+        color: rgb(255, 0, 174);
+        font-size: 1.5em;
+      }
+
+      .hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* =========================
+         TYPOGRAPHY
+      ========================= */
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "cofo-raffine-light", sans-serif;
+        font-weight: 900;
+        color: rgb(255, 0, 174);
+      }
+
+      h2 {
+        opacity: 0.85;
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: white;
+      }
+
+      /* =========================
+         SECTIONS
+      ========================= */
+
+      #exercises,
+      #projects {
+        margin-top: 30px;
+        padding: 20px;
+
+        border: 1px solid rgba(255, 0, 174, 0.3);
+        border-radius: 12px;
+      }
+
+      #exercises h3,
+      #projects h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      /* =========================
+         BUTTON LINKS
+      ========================= */
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        display: inline-block;
+        padding: 10px 14px;
+        margin-top: 6px;
+
+        border: 1px solid rgba(255, 0, 174, 0.4);
+        border-radius: 999px;
+
+        transition: 0.2s ease;
+      }
+
+      a:hover {
+        background: rgb(255, 0, 174);
+        color: black;
+        transform: translateY(-2px);
+      }
+
+      /* =========================
+         LISTS
+      ========================= */
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- FIXED PINK BANNER -->
+    <div id="banner">
+      TW2NTY8: A DIGITAL ARCHIVE BY MARINA JONES
+    </div>
+
+    <div id="container">
+      <!-- ASCII BLINK -->
+      <div id="eye-wrapper">
+        <pre id="openEyes" class="ascii">
+    _,..,_         _,..,_ 
+_,-`/ o \ '.     .' / o \`-,_
+ '-.\___/.-`     `-.\___/.-'
+        </pre>
+
+        <pre id="closedEyes" class="ascii hidden">
+   
+  ----------      ----------
+        </pre>
+      </div>
+
+      <h1>TW2NTY8: A Digital Archive</h1>
+      <h2><h2>Marina Jones | Interactive 1 | 2025-2026</h2></h2>
+
+      <p>
+        My name is Marina Jones, and I am a full-time student at California College of the Arts in San Francisco, where I study Graphic Design as my major alongside Writing as my minor. I will be using this website to document my progress, experiments, and finished work throughout Interactive 1 this semester. This site also serves as a record of my last semester at CCA, a period that feels especially significant as I prepare to transition out of the school due to its upcoming shutdown. As a result, I am approaching this body of work not only as an academic requirement, but also as a personal archive of everything I have built, learned, and experienced here. Throughout this process, I hope to capture both my creative growth and the uncertainty of this moment.
+      </p>
+
+      <div id="exercises">
+        <h3>Exercises</h3>
+        <ul>
+          <li><a href="exercises/css-grid/index.html">Mondrian</a></li>
+        </ul>
+      </div>
+
+      <div id="projects">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="projects/my css typeface/index.html">CSS Typeface</a></li>
+          <li><a href="projects/my-game/index.html">Site Map</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const openEyes = document.getElementById("openEyes");
+      const closedEyes = document.getElementById("closedEyes");
+
+      function blink() {
+        openEyes.classList.add("hidden");
+        closedEyes.classList.remove("hidden");
+
+        setTimeout(() => {
+          openEyes.classList.remove("hidden");
+          closedEyes.classList.add("hidden");
+        }, 200);
+      }
+
+      closedEyes.classList.add("hidden");
+      setInterval(blink, 3000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background: rgb(255, 0, 162);
+  overflow: hidden;
+}
+
+/* CENTER WRAPPER */
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CANVAS */
+.canvas {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 80vw;
+  max-width: 100vw;
+  margin: auto;
+}
+
+/* STAR FRAME */
+.star-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* SLIDES */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* BACKGROUND */
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* HOTSPOTS */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 5;
+}
+
+.hotspot:hover {
+  filter: drop-shadow(0 0 20px rgb(255, 0, 174));
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 81%;
+  left: -5%;
+  width: 22%;
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* BUTTONS (unchanged) */
+.btn1 { top: 82%; left: 14%; height: 88%; }
+.btn2 { top: 60%; left: 80%; height: 20%; }
+.btn3 { top: 78%; left: 78.5%; height: 22%; }
+.btn4 { top: 37%; left: 23%; height: 28%; }
+.btn5 { top: 61%; left: 55%; height: 60%; }
+.btn6 { top: 67.5%; left: 19.5%; height: 44%; }
+.btn7 { top: 50%; left: 80%; height: 25%; }
+.btn8 { top: 65%; left: 80%; height: 25%; }
+.btn9 { top: 90%; left: 78%; height: 23%; }
+.btn10 { top: 68%; left: 79%; height: 25%; }
+.btn11 { top: 85%; left: 78.5%; height: 25%; }
+.btn12 { top: 55%; left: 79.5%; height: 25%; }
+.btn13 { top: 68%; left: 78.5%; height: 25%; }
+.btn14 { top: 48%; left: 79%; height: 25%; }
+.btn15 { top: 63%; left: 80.5%; height: 25%; }
+.btn16 { top: 55%; left: 79%; height: 23%; }
+
+/* MAP BUTTON (🔥 FIXED LAYER) */
+.map-btn {
+  position: absolute;
+  top: -7%;
+  width: 15%;
+  z-index: 20000; /* 🔥 ABOVE EVERYTHING */
+  cursor: pointer;
+}
+
+/* MAP OVERLAY */
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+
+  z-index: 5000;
+}
+
+.map-overlay.active {
+  display: block;
+}
+
+/* MAP IMAGE */
+.map-image {
+  position: absolute;
+  width: 115%;
+  height: 112%;
+  object-fit: contain;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+}
+
+/* MAP MARKER */
+.map-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+/* MAP DIRECTIONS */
+.map-directions {
+  position: absolute;
+  width: 60%;
+  top: var(--dir-top, -11%);
+  left: var(--dir-left, 50%);
+
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  pointer-events: none;
+}
